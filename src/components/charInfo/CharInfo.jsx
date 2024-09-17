@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropsTypes from "prop-types";
 import Spinner from "../spinner/Spinner";
-import ErrorMessage from "../errorMessage/ErorrMessage";
+import ErorrMessage from "../errorMessage/ErorrMessage";
 import useMarverlService from "../../services/MarvelServices";
 import Skeleton from "../skeleton/Skeleton";
 
@@ -33,7 +33,7 @@ const CharInfo = (props) => {
   };
 
   const skeleton = char || loading || error ? null : <Skeleton />;
-  const errorMessage = error ? <ErrorMessage /> : null;
+  const errorMessage = error ? <ErorrMessage /> : null;
   const spinner = loading ? <Spinner /> : null;
   const content = !(loading || error || !char) ? <View char={char} /> : null;
 

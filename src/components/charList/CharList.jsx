@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import useMarverlService from "../../services/MarvelServices";
 import Spinner from "../spinner/Spinner";
-import ErrorMessage from "../errorMessage/ErorrMessage";
+import ErorrMessage from "../errorMessage/ErorrMessage";
 
 import "./charList.scss";
 
@@ -83,7 +83,7 @@ const CharList = (props) => {
 
   const item = renderItems(charList);
 
-  const errorMessage = error ? <ErrorMessage /> : null;
+  const errorMessage = error ? <ErorrMessage /> : null;
   const spinner = loading && !newItemLoading ? <Spinner /> : null;
 
   return (

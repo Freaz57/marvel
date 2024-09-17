@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import useMarverlService from "../../services/MarvelServices";
 import Spinner from "../spinner/Spinner";
-import ErrorMessage from "../errorMessage/ErorrMessage";
+import ErorrMessage from "../errorMessage/ErorrMessage";
 
 import "./comicsList.scss";
 
@@ -59,7 +59,7 @@ const ComicsList = () => {
 
   const items = renderItemsComics(comicsList);
 
-  const errorMessage = error ? <ErrorMessage /> : null;
+  const errorMessage = error ? <ErorrMessage /> : null;
   const spinner = loading && !newItemLoading ? <Spinner /> : null;
 
   return (
